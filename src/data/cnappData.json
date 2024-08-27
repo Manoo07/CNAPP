@@ -1,0 +1,267 @@
+{
+    "CNAPPData": {
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "name": "Critical Vulnerability in OpenSSL",
+          "severity": "critical",
+          "affectedResources": [
+            { "resourceId": "vm-123", "resourceType": "VM", "location": "us-east-1" },
+            { "resourceId": "container-456", "resourceType": "Container", "location": "us-west-2" }
+          ],
+          "discoveredAt": "2024-08-01T10:30:00Z",
+          "remediationStatus": "pending"
+        },
+        {
+          "id": "VULN-002",
+          "name": "SQL Injection Vulnerability",
+          "severity": "high",
+          "affectedResources": [
+            { "resourceId": "app-789", "resourceType": "Application", "location": "eu-central-1" }
+          ],
+          "discoveredAt": "2024-08-05T14:45:00Z",
+          "remediationStatus": "in-progress"
+        },
+        {
+          "id": "VULN-003",
+          "name": "Cross-Site Scripting (XSS)",
+          "severity": "medium",
+          "affectedResources": [
+            { "resourceId": "web-345", "resourceType": "Web Application", "location": "ap-southeast-1" }
+          ],
+          "discoveredAt": "2024-08-10T08:20:00Z",
+          "remediationStatus": "resolved"
+        },
+        {
+          "id": "VULN-004",
+          "name": "Buffer Overflow",
+          "severity": "high",
+          "affectedResources": [
+            { "resourceId": "vm-567", "resourceType": "VM", "location": "us-west-1" },
+            { "resourceId": "service-678", "resourceType": "Microservice", "location": "eu-west-1" }
+          ],
+          "discoveredAt": "2024-08-12T09:15:00Z",
+          "remediationStatus": "pending"
+        },
+        {
+          "id": "VULN-005",
+          "name": "Insecure Deserialization",
+          "severity": "critical",
+          "affectedResources": [
+            { "resourceId": "app-901", "resourceType": "Application", "location": "us-east-2" }
+          ],
+          "discoveredAt": "2024-08-15T12:00:00Z",
+          "remediationStatus": "in-progress"
+        }
+      ],
+      "compliance": [
+        {
+          "id": "COMP-001",
+          "standard": "CIS Benchmark",
+          "control": "Ensure MFA is enabled",
+          "status": "non-compliant",
+          "affectedResources": [
+            { "resourceId": "user-101", "resourceType": "IAM User", "location": "global" }
+          ],
+          "lastChecked": "2024-08-10T09:15:00Z"
+        },
+        {
+          "id": "COMP-002",
+          "standard": "PCI DSS",
+          "control": "Encrypt sensitive data",
+          "status": "compliant",
+          "affectedResources": [
+            { "resourceId": "db-202", "resourceType": "Database", "location": "ap-southeast-1" }
+          ],
+          "lastChecked": "2024-08-12T11:00:00Z"
+        },
+        {
+          "id": "COMP-003",
+          "standard": "ISO 27001",
+          "control": "Access Control Policy",
+          "status": "non-compliant",
+          "affectedResources": [
+            { "resourceId": "policy-303", "resourceType": "Policy", "location": "eu-central-1" }
+          ],
+          "lastChecked": "2024-08-14T13:30:00Z"
+        },
+        {
+          "id": "COMP-004",
+          "standard": "SOC 2",
+          "control": "Data Retention Policy",
+          "status": "compliant",
+          "affectedResources": [
+            { "resourceId": "storage-404", "resourceType": "Storage", "location": "us-west-2" }
+          ],
+          "lastChecked": "2024-08-16T15:45:00Z"
+        },
+        {
+          "id": "COMP-005",
+          "standard": "HIPAA",
+          "control": "PHI Encryption",
+          "status": "non-compliant",
+          "affectedResources": [
+            { "resourceId": "app-505", "resourceType": "Application", "location": "us-east-1" }
+          ],
+          "lastChecked": "2024-08-18T17:20:00Z"
+        }
+      ],
+      "workloads": [
+        {
+          "id": "WRKLD-001",
+          "type": "Container",
+          "status": "running",
+          "resourceId": "container-123",
+          "cpuUsage": 75.5,
+          "memoryUsage": 65.3,
+          "networkTraffic": 1024.5,
+          "location": "us-east-1"
+        },
+        {
+          "id": "WRKLD-002",
+          "type": "VM",
+          "status": "stopped",
+          "resourceId": "vm-456",
+          "cpuUsage": 0.0,
+          "memoryUsage": 0.0,
+          "networkTraffic": 0.0,
+          "location": "us-west-2"
+        },
+        {
+          "id": "WRKLD-003",
+          "type": "Serverless Function",
+          "status": "running",
+          "resourceId": "function-789",
+          "cpuUsage": 50.2,
+          "memoryUsage": 45.1,
+          "networkTraffic": 2048.0,
+          "location": "eu-central-1"
+        },
+        {
+          "id": "WRKLD-004",
+          "type": "Kubernetes Pod",
+          "status": "pending",
+          "resourceId": "pod-321",
+          "cpuUsage": 10.0,
+          "memoryUsage": 20.3,
+          "networkTraffic": 512.4,
+          "location": "ap-southeast-1"
+        },
+        {
+          "id": "WRKLD-005",
+          "type": "Database Instance",
+          "status": "running",
+          "resourceId": "db-654",
+          "cpuUsage": 65.0,
+          "memoryUsage": 75.5,
+          "networkTraffic": 1536.8,
+          "location": "us-west-1"
+        }
+      ],
+      "networkSecurity": [
+        {
+          "id": "NETSEC-001",
+          "name": "Suspicious Inbound Traffic",
+          "severity": "medium",
+          "sourceIP": "192.168.1.100",
+          "destinationIP": "10.0.0.5",
+          "protocol": "TCP",
+          "port": 443,
+          "detectedAt": "2024-08-15T12:30:00Z",
+          "remediationStatus": "investigating"
+        },
+        {
+          "id": "NETSEC-002",
+          "name": "Port Scanning Detected",
+          "severity": "high",
+          "sourceIP": "203.0.113.55",
+          "destinationIP": "10.0.0.7",
+          "protocol": "TCP",
+          "port": 22,
+          "detectedAt": "2024-08-16T08:45:00Z",
+          "remediationStatus": "blocked"
+        },
+        {
+          "id": "NETSEC-003",
+          "name": "Unauthorized Access Attempt",
+          "severity": "critical",
+          "sourceIP": "198.51.100.23",
+          "destinationIP": "10.0.0.10",
+          "protocol": "UDP",
+          "port": 53,
+          "detectedAt": "2024-08-17T14:20:00Z",
+          "remediationStatus": "blocked"
+        },
+        {
+          "id": "NETSEC-004",
+          "name": "Data Exfiltration Attempt",
+          "severity": "high",
+          "sourceIP": "172.16.254.1",
+          "destinationIP": "192.168.1.50",
+          "protocol": "TCP",
+          "port": 80,
+          "detectedAt": "2024-08-18T09:30:00Z",
+          "remediationStatus": "investigating"
+        },
+        {
+          "id": "NETSEC-005",
+          "name": "DDoS Attack Detected",
+          "severity": "critical",
+          "sourceIP": "203.0.113.76",
+          "destinationIP": "10.0.0.2",
+          "protocol": "TCP",
+          "port": 443,
+          "detectedAt": "2024-08-19T17:10:00Z",
+          "remediationStatus": "mitigated"
+        }
+      ],
+      "identityAndAccessManagement": [
+        {
+          "id": "IAM-001",
+          "user": "admin-user",
+          "action": "Login Attempt",
+          "status": "failed",
+          "reason": "Incorrect Password",
+          "location": "global",
+          "timestamp": "2024-08-20T10:00:00Z"
+        },
+        {
+          "id": "IAM-002",
+          "user": "service-account-001",
+          "action": "API Call",
+          "status": "successful",
+          "reason": "Authorized",
+          "location": "us-east-1",
+          "timestamp": "2024-08-20T11:15:00Z"
+        },
+        {
+          "id": "IAM-003",
+          "user": "dev-user-002",
+          "action": "Key Rotation",
+          "status": "successful",
+          "reason": "Compliance Requirement",
+          "location": "eu-west-1",
+          "timestamp": "2024-08-20T13:30:00Z"
+        },
+        {
+          "id": "IAM-004",
+          "user": "temp-user-003",
+          "action": "Access Attempt",
+          "status": "failed",
+          "reason": "User Disabled",
+          "location": "us-west-2",
+          "timestamp": "2024-08-20T14:45:00Z"
+        },
+        {
+          "id": "IAM-005",
+          "user": "service-account-004",
+          "action": "Resource Deletion",
+          "status": "successful",
+          "reason": "Scheduled Maintenance",
+          "location": "ap-southeast-1",
+          "timestamp": "2024-08-20T16:00:00Z"
+        }
+      ]
+    }
+  }
+  
